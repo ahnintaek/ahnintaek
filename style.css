@@ -1,0 +1,39 @@
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+ol {
+    border-right: 1px solid black;
+    margin: 0;
+    padding: 20px 0 0 20px;
+}
+#grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-areas: 목차 설명;
+
+}
+#grid2 {
+    display: inline-grid;
+    grid-column: auto;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    justify-items: right;
+    gap: 10px;
+}
+#text {
+    padding-left: 15px;
+}
+@media(max-width: 800px) {
+    #grid{
+        display: block;
+    }
+    ol {
+        border-right: none;
+        border-bottom: 1px double black;
+        padding-bottom: 10px;
+    }
+    h1 {
+        border-bottom: none;
+    }
+}

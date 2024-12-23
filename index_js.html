@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index_js.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="alert-box" id="alert">
+        <span id="title">Alert 박스</span>
+        <button id="close">닫기</button>
+    </div>
+    <button onclick="alertopenBtn('block')">버튼</button>
+
+    <button onclick="require('아이디')">버튼1</button>
+    <button onclick="require('패스워드')">버튼2</button>
+
+    <script>
+        function alertopenBtn(구멍) {
+            document.getElementById('alert').style.display = 구멍;
+        }
+        function require(el) {
+            document.getElementById('alert').style.display = 'block';
+            document.getElementById('alert').style.backgroundColor = 'green';
+            document.getElementById('title').innerHTML = el+'를 입력해주세요';
+        }
+        document.getElementById('close').addEventListener('mouseover', function(){
+            document.getElementById('alert').style.display = 'none';
+        })
+    </script>
+
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <h4 id="test">안녕하세요</h4>
+
+    <script>
+        $('#test').addClass('yellow-bg');
+
+    </script>
+
+
+</body>
+</html>

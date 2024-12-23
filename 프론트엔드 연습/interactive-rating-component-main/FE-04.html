@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Fraunces:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon-32x32.png" type="image/png">
+    <title>Survey</title>
+    <style>
+        :root {
+            --Orange: hsl(25, 97%, 53%);
+            --White: hsl(0, 0%, 100%);
+            --Light-Grey: hsl(217, 12%, 63%);
+            --Dark-Blue: hsl(213, 19%, 18%);
+            --Very-Dark-Blue: hsl(216, 12%, 8%);
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            max-width: 1440px;
+            width: auto;
+            max-height: 100%;
+            background-color: var(--Very-Dark-Blue);
+            font-size: 15px;
+            color: var(--Light-Grey);
+            font-family: 'Overpass', Serif;
+        }
+
+        .card {
+            width: 320px;
+            background-color: var(--Dark-Blue);
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+        .round-text {
+            border: 1px solid var(--Dark-Blue);
+            border-radius: 30px;
+            width: 40px;
+            height: 40px;
+            line-height: 45px;
+            text-align: center;
+            background-color: var(--Light-Grey);
+        }
+        .main-text {
+            padding-bottom: 20px;
+        }
+        .Question {
+            color: var(--White);
+            font-weight: 700;
+            font-size: 25px;
+            margin: 20px 0;
+        }
+        .btn {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .btn-num {
+            border: 1px solid var(--Dark-Blue);
+            border-radius: 30px;
+            margin: auto;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            color: var(--Dark-Blue);
+            background-color: var(--Light-Grey);
+            font-weight: 700;
+        }
+        .btn-num:hover {
+            background-color: var(--Orange);
+        }
+        .btn-num.clicked {
+            background-color: var(--White);
+        }
+        .btn-sub {
+            background-color: var(--Orange);
+            color: var(--Very-Dark-Blue);
+            border-radius: 15px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            width: 100%;
+            font-family: 'Overpass', serif;
+            font-weight: 700;
+            font-size: large;
+        }
+        .btn-sub:hover{
+            background-color: var(--White);
+        }
+        .choose-img {
+            margin: 10px auto;
+            text-align: center;
+            display: block;
+        }
+        .choose-title {
+            color: var(--Orange);
+            background-color: var(--Very-Dark-Blue);
+            text-align: center;
+            border-radius: 15px;
+            height: 30px;
+            line-height: 30px;
+            margin: 20px auto;
+        }
+        .choose-header {
+            text-align: center;
+            margin: 10px auto;
+            color: var(--White);
+            font-weight: 700;
+            font-size: 30px;
+        }
+        .choose-text {
+            text-align: center;
+        }
+        @media (max-width: 375px) {
+            body {
+                margin: auto 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id="survey-card">
+        <div class="round-text">
+            <img src="images/icon-star.svg">
+        </div>
+        <div class="Question">
+            How did we do?
+        </div>
+        <div class="main-text">
+            Please let us know how we did with your support requset. All feedback is appreciated to help us improve our offering!
+        </div>
+        <div class="btn">
+            <input type="button" value="1" name="1" class="btn-num">
+            <input type="button" value="2" name="2" class="btn-num">
+            <input type="button" value="3" name="3" class="btn-num">
+            <input type="button" value="4" name="4" class="btn-num">
+            <input type="button" value="5" name="5" class="btn-num">
+        </div>
+        <div>
+            <input type="button" value="SUBMIT" name="SUBMIT" class="btn-sub">
+        </div>
+    </div>
+    <script>
+        let selectedValue = null;  // 선택된 값 저장 변수
+
+        // 버튼 클릭 시 선택된 값 저장
+        document.querySelectorAll('.btn-num').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.btn-num').forEach(b => b.classList.remove('clicked'));
+                this.classList.add('clicked');
+                selectedValue = this.value;  // 선택된 값 저장
+            });
+        });
+
+        // SUBMIT 클릭 시 화면 내용 변경
+        document.querySelector('.btn-sub').addEventListener('click', function() {
+            if (selectedValue) {
+                // 선택된 값이 있을 때 결과 화면으로 전환
+                const surveyCard = document.getElementById('survey-card');
+                surveyCard.innerHTML = `
+                    <img src="images/illustration-thank-you.svg" class="choose-img">
+                    <div class="choose-title">
+                        You selected ${selectedValue} out of 5
+                    </div>
+                    <div class="choose-header">
+                        Thank You!
+                    </div>
+                    <div class="choose-text">
+                        We appreciate you taking the time to give a rating.<br>
+                        If you ever need more support, don't hesitate to get in touch!
+                    </div>
+                `;
+            } else {
+                // 선택된 값이 없으면 경고 메시지 표시
+                alert("Please select a rating before submitting.");
+            }
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>

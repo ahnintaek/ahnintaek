@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>edm example</title>
+    <style>
+        body {
+            background-color: rgb(240, 240, 240);
+            margin: 0;
+            padding: 0;
+            font-size: 15px;
+        }
+        div {
+            background-color: white;
+            padding: 0 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: none;
+        }
+        th {
+            font-weight: bold;
+            background-color: rgb(240, 240, 240);
+            width: 120px;
+            vertical-align: top;
+        }
+        th, td {
+            border: 1px solid rgb(200, 200, 200);
+            padding: 10px;
+            text-align: left;
+        }
+        h1 {
+            text-align: center;
+            padding-bottom: 0;
+        }
+        .bdf-link {
+            background-color: navy;
+            color: white;
+            width: 300px;
+            height: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;  /* 수평 가운데 정렬 */
+            display: flex;
+            align-items: center;  /* 수직 가운데 정렬 */
+            justify-content: center;  /* 수평 가운데 정렬 */
+            margin: 0 auto;
+            line-height: 50px;  /* 텍스트 수직 중앙 정렬 */
+            padding: 0;
+        }
+        .mv-text {
+            font-size: 12px;
+            color: grey;
+            border: none;
+            text-align: start;
+            padding: 0;
+            padding-bottom: 20px;
+        }
+        p {
+            font-size: 12px;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div style="max-width: 700px; margin: 0 auto;">
+        <div style="padding-bottom: 5px; border-bottom: 1px solid rgb(200, 200, 200);"><a href="grid.html"><img src="질문있습니다.png" alt="로고" style="width: 100px; height: 100px;"></a></div>
+        <h1>공동연구 제안이 도착했습니다.</h1>
+        <div style="text-align: center;"><span style="color: cornflowerblue;">#의뢰자명</span>님으로부터 받은 연구 의뢰 정보를 확인 후, 공동연구 진행 여부를 전달해주세요.</div>
+        <h3 style="margin-top: 5%; margin-bottom: 1%;">의뢰자 정보</h3>
+        <table>
+            <tr>
+                <th>의뢰자명</th>
+                <td>김제약</td>
+            </tr>
+            <tr>
+                <th>소속기업</th>
+                <td>더존제약</td>
+            </tr>
+            <tr>
+                <th>연락처</th>
+                <td>010-1111-2222</td>
+            </tr>
+            <tr>
+                <th>이메일</th>
+                <td>test@wehago.com</td>
+            </tr>
+        </table>
+
+        <h3 style="margin-top: 5%; margin-bottom: 1%;">연구 의뢰 정보</h3>
+        <table>
+            <tr>
+                <th>교수진(기관)</th>
+                <td>김의료(서울삼성병원)</td>
+            </tr>
+            <tr>
+                <th>연구주체</th>
+                <td>연구자주도</td>
+            </tr>
+            <tr>
+                <th>의뢰내용</th>
+                <td>정형외과 수술 후 발생한 섬망의 발생빈도 연구</td>
+            </tr>
+            <tr>
+                <th>연구설명</th>
+                <td>이 연구는 삼성서울병원 정형외과 수술 환자의 데이터를 활용하여, 2024년 1월부터 12월까지 1년간 진행합니다. 수술 후 섬망 발생 빈도롸 관련 요인을 분석하며, 환자 연령, 성별, 시존 질환 등의 요인을 바탕으로 발생률을 조사합니다. 연구비용은 약 5천만원으로 예상되며, 이를 통해 섬망 예방 및 관리 방안을 제시합니다.</td>
+            </tr>
+            <tr>
+                <th>예상 연구기간</th>
+                <td>6개월 미만</td>
+            </tr>
+            <tr>
+                <th>예상 연구비용</th>
+                <td>999,999 만원</td>
+            </tr>
+            <tr>
+                <th>활용계획</th>
+                <td>연구 논문, 신약 개발, 의료기기 개발, 창업, 기타</td>
+            </tr>
+            <tr>
+                <th>첨부파일</th>
+                <td style="text-decoration: underline;">
+                    <div style="text-align: left; padding: 0;">정형외과 수술 후 발생한 섬망의 발생 빈도 공동연구 제안서 (522.23MB)<span style="align-items: end;"><img src="질문있습니다.png" style="width: 15px; height: 15px;"></span></div>
+                    <div style="text-align: left; padding: 0;">정형외과 수술 후 발생한 섬망의 발생 빈도 공동연구 제안서 (522.23MB)<span><img src="질문있습니다.png" style="width: 15px; height: 15px;"></span></div>
+                    <div style="text-align: left; padding: 0;">정형외과 수술 후 발생한 섬망의 발생 빈도 공동연구 제안서 (522.23MB)<span><img src="질문있습니다.png" style="width: 15px; height: 15px;"></span></div>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td class="mv-text">
+                    정밀의료 빅데이터 플랫폼의 개인설정 > 공동연구의뢰 > 받은 내역에서 의뢰에 대한 승인 또는 거절 결과를 전달할 수 있습니다.
+                </td>
+            </tr>
+            <table>
+                <tr>
+                    <td class="bdf-link">
+                        정밀의료빅데이터플랫폼 바로가기
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: none; height: 30px;"></td>
+                </tr>
+            </table>
+        </table>
+    </div>
+    <p>본 메일은 발신전용 메일이므로 회신되지 않습니다.</p>
+    <p>Copylight DOUZONE BIZON, All right reserved.</p>
+</body>
+</html>

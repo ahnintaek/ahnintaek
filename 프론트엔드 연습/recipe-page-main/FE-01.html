@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/favicon-32x32.png" type="image\png">
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Simple Omlette Recipe</title>
+    <style>
+        body {
+            background-color: hsl(30, 54%, 90%);
+            font-size: 16px;
+            font-family: 'Young Serif', serif;
+            font-weight: 400;
+        }
+        .main {
+            padding: 20px 40px;
+            width: 800px;
+            background-color: hsl(0, 0%, 100%);
+            margin: 50px auto;
+            border-radius: 15px;
+        }
+        .text-normal {
+            font-family: 'Outfit', serif;
+        }
+        .pre-time {
+            padding: 15px 15px;
+            background-color: hsl(330, 100%, 98%);
+            font-family: 'Outfit', serif;
+            border-radius: 15px;
+        }
+        .omlette-img {
+            max-width: 100%;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+        ol::marker {
+            color: hsl(14, 45%, 36%);
+            font-weight: 700;
+        }
+        li {
+            margin-bottom: 10px;
+            padding-left: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 12px;
+            text-indent: 15px;
+        }
+        td:last-child, th:last-child {
+            border-right: none;
+        }
+        tr {
+            border-bottom: 1px solid hsl(30, 54%, 90%);
+        }
+        tr:last-child {
+            border-bottom: none;
+        }
+        @media (max-width: 450px) {
+            body {
+                margin: 0;
+            }
+            .main {
+                width: 100%;
+                margin: 0;
+                border-radius: 0;
+                padding: 0;
+                position: relative;
+            }
+            .omlette-img {
+                border-radius: 0;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="assets/images/image-omelette.jpeg" class="omlette-img">
+        <h1>Simple Omlette Recipe</h1>
+        <div class="text-normal" style="font-weight: 400; padding-bottom: 30px;">An easy and quick dish, perfect for only meal. This classic Omlette combines beaten eggs cooked to perfection, optianally filled your choice  of cheese, vegetables, or meats.</div>
+        <div class="pre-time">
+            <h3 style="color: hsl(332, 51%, 32%); font-family: 'Outfit' serif; font-weight: 700; padding-left: 15px;">Preparation time</h3>
+            <ul>
+                <li><span style="font-family: 'Outfit' serif; font-weight: 600; color: hsl(24, 5%, 18%);">Total</span>: Approximately 10 minutes</li>
+                <li><span style="font-family: 'Outfit' serif; font-weight: 600; color: hsl(24, 5%, 18%)">Preparation</span>: 5 minutes</li>
+                <li><span style="font-family: 'Outfit' serif; font-weight: 600; color: hsl(24, 5%, 18%)">Cooking</span>: 5 minutes</li>
+            </ul>
+        </div>
+        <div>
+            <h2 style="color: hsl(14, 45%, 36%);">Ingredients</h2>
+            <ul class="text-normal">
+                <li>2-3 large eggs</li>
+                <li>Salt,to taste</li>
+                <li>Pepper, to taste</li>
+                <li>1 tablespoon of butter or oil</li>
+                <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+            </ul>
+        </div>
+        <div style="border-bottom: 1px hsl(30, 18%, 87%) solid; padding: 10px 0;"></div>
+        <div>
+            <h2 style="color: hsl(14, 45%, 36%);">Instruction</h2>
+            <ol class="text-normal">
+                <li><span style="font-family: 'Outfit' serif; font-weight: 600;">Beat the eggs</span>: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.</li>
+                <li><span style="font-family: 'Outfit' serif; font-weight: 600;">Heat the pan</span>: Place a non-stick frying pan over medium heat and add butter or oil.</li>
+                <li><span style="font-family: 'Outfit' serif; font-weight: 600;">Cook the omlette</span>: Once the butter is melted add bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.</li>
+                <li><span style="font-family: 'Outfit' serif; font-weight: 600;">Add fillings(optional)</span>: When the eggs begin to set at the  edges but are still slightly runny  in the middle, sprinkle  your chosen fillings over  one half of the omlette.</li>
+                <li><span style="font-family: 'Outfit' serif; font-weight: 600;">Fold and serve</span>: As the omlette continues to cook, carefully  lift on edge and fold it over the fillings. Let it cook for another minute, then slide it on to a plate.</li>
+                <li><span style="font-family: 'Outfit' serif; font-weight: 600;">Enjoy</span>: Serve hot, witg additional salt and pepper if needed.</li>
+            </ol>
+        </div>
+        <div style="border-bottom: 1px hsl(30, 18%, 87%) solid; padding: 10px 0;"></div>
+        <div>
+            <h2 style="color: hsl(14, 45%, 36%);">Nutrition</h2>
+            <div class="text-normal">The table below shows nutritional values per serving without the additional fillings.</div>
+            <table class="text-normal" style="max-width: 100%;">
+                <tr>
+                    <td style="color:hsl(30, 10%, 34%);">Calories</td>
+                    <td style="color: hsl(14, 45%, 36%); font-family: 'Outfit' serif; font-weight: 700;">277kcal</td>
+                </tr>
+                <tr>
+                    <td style="color:hsl(30, 10%, 34%);">Calbs</td>
+                    <td style="color: hsl(14, 45%, 36%); font-family: 'Outfit' serif; font-weight: 700;">0g</td>
+                </tr>
+                <tr>
+                    <td style="color:hsl(30, 10%, 34%);">Protein</td>
+                    <td style="color: hsl(14, 45%, 36%); font-family: 'Outfit' serif; font-weight: 700;">20g</td>
+                </tr>
+                <tr>
+                    <td style="color:hsl(30, 10%, 34%);">Fat</td>
+                    <td style="color: hsl(14, 45%, 36%); font-family: 'Outfit' serif; font-weight: 700;">22g</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

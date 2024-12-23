@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon-32x32.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Fraunces:wght@700&display=swap" rel="stylesheet">
+    <title>Free Trial</title>
+    <style>
+        :root {
+            --Red: hsl(0, 100%, 74%);
+            --Green: hsl(154, 59%, 51%);
+            --Blue: hsl(248, 32%, 49%);
+            --Dark-Blue: hsl(249, 10%, 26%) ;
+            --Grayish-Blue: hsl(246, 25%, 77%);
+        }
+        body {
+            background-color: var(--Red);
+            background-image: url(images/bg-intro-desktop.png);
+            background-size: cover;
+            background-position: center;
+            font-family: 'Poppins', serif;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            width: 1440px;
+            height: 100vh;
+        }
+        .title {
+            color: white;
+            margin: 0 10%;
+        }
+        .title-main {
+            font-weight: 700;
+            font-size: xxx-large;
+            margin: 20px 0;
+        }
+        .title-text {
+            font-size: large;
+        }
+        .pay {
+            background-color: var(--Blue);
+            color: white;
+            text-align: center;
+            width: 100%;
+            border-radius: 15px;
+            height: 60px;
+            line-height: 60px;
+            margin-bottom: 20px;
+            font-size: large;
+            box-shadow: 0 10px 3px rgb(0, 0, 0, 0.3);
+        }
+        .input-box {
+            background-color: white;
+            box-sizing: border-box;
+            width: 100%;
+            text-align: center;
+            border-radius: 15px;
+            padding: 10px 20px;
+            box-shadow: 0 10px 3px rgb(0, 0, 0, 0.3);
+        }
+        .input-text {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0 0;
+            border-radius: 10px;
+            font-weight: 600;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .SUBMIT {
+            color: white;
+            font-weight: 700;
+            font-size: large;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            background-color: var(--Green);
+            border-radius: 10px;
+            margin: 20px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .warning {
+            color: var(--Grayish-Blue);
+            font-size: small;
+        }
+        .war-text {
+            color: var(--Red);
+            font-weight: 500;
+        }
+        .error-message {
+            display: none;
+            color: var(--Red);
+            font-style: italic;
+            text-align: end;
+        }
+        input:invalid:not(:placeholder-shown) {
+            border: 1px solid var(--Red);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="title">
+            <div class="title-main">
+                Learn to code by watching others
+            </div>
+            <div class="title-text">
+                See how experienced developers solve problems in real-time.<br>
+                Watching scripted tutorials is great. but understanding how developers think is invaluable.
+            </div>
+        </div>
+        <div>
+            <div class="pay">
+                <strong>Try it free 7days</strong> then $20/mo. thereafter
+            </div>
+            <div class="input-box">
+                <input type="text" id="firstname" placeholder="First-name" class="input-text">
+                <span id="firstnameError" class="error-message">First name cannot be empty</span>
+
+                <input type="text" id="lastname" placeholder="Last-name" class="input-text">
+                <span id="lastnameError" class="error-message">Last name cannot be empty</span>
+
+                <input type="email" id="email" placeholder="Email Address" class="input-text"
+                required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
+                <span id="emailError" class="error-message">email cannot be empty</span>
+
+                <input type="password" id="password" placeholder="Password" class="input-text">
+                <span id="passwordError" class="error-message">Password cannot be empty</span>
+
+                <input type="submit" id="submitBtn" value="CLAIM YOUR FREE TRIAL" class="SUBMIT">
+                <div class="warning">
+                    By clicking the button, you are agreeing to our <span class="war-text">Terms and Services</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script>
+        // 폼 제출 버튼 클릭 시 실행되는 함수
+        document.getElementById("submitBtn").addEventListener("click", function(event) {
+            // 모든 error message 숨기기
+            const errorMessages = document.querySelectorAll('.error-message');
+            errorMessages.forEach(error => error.style.display = 'none');
+
+            let isValid = true;
+
+            // Firstname 검사
+            const firstname = document.getElementById("firstname");
+            if (!firstname.value.trim()) {
+                document.getElementById("firstnameError").style.display = "block";
+                isValid = false;
+            }
+
+            // Lastname 검사
+            const lastname = document.getElementById("lastname");
+            if (!lastname.value.trim()) {
+                document.getElementById("lastnameError").style.display = "block";
+                isValid = false;
+            }
+
+            // Email 검사
+            const email = document.getElementById("email");
+            if (!email.value.trim()) {
+                document.getElementById("emailError").textContent = "Email is required.";
+                document.getElementById("emailError").style.display = "block";
+                isValid = false;
+            } else if (!email.checkValidity()) {
+                document.getElementById("emailError").textContent = "Please enter a valid email address.";
+                document.getElementById("emailError").style.display = "block";
+                isValid = false;
+            }
+
+            // Password 검사
+            const password = document.getElementById("password");
+            if (!password.value.trim()) {
+                document.getElementById("passwordError").style.display = "block";
+                isValid = false;
+            }
+
+            // 폼 제출 방지 (유효하지 않으면)
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // 폼 제출 버튼 클릭 시 실행되는 함수
+        $("#submitBtn").click(function(event) {
+            // 모든 error message 숨기기
+            $('.error-message').hide();
+
+            let isValid = true;
+
+            // Firstname 검사
+            const firstname = $("#firstname");
+            if (!firstname.val().trim()) {
+                $("#firstnameError").show();
+                isValid = false;
+            }
+
+            // Lastname 검사
+            const lastname = $("#lastname");
+            if (!lastname.val().trim()) {
+                $("#lastnameError").show();
+                isValid = false;
+            }
+
+            // Email 검사
+            const email = $("#email");
+            if (!email.val().trim()) {
+                $("#emailError").text("Email is required.").show();
+                isValid = false;
+            } else if (!email[0].checkValidity()) {
+                $("#emailError").text("Please enter a valid email address.").show();
+                isValid = false;
+            }
+
+            // Password 검사
+            const password = $("#password");
+            if (!password.val().trim()) {
+                $("#passwordError").show();
+                isValid = false;
+            }
+
+            // 폼 제출 방지 (유효하지 않으면)
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

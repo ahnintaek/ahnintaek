@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정밀의료 빅데이터 플랫폼</title>
+    <style>
+        body {
+            margin: 100px auto;
+            background-color: lightgray;
+        }
+        .create-team {
+            background-color: white;
+            border-radius: 15px;
+            display: grid;
+            grid-template-columns: 1fr 0.5fr;
+            width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        .create-team img {
+            width: 100%;
+            height: auto;
+        }
+        .create-team table {
+            padding-top: 30px;
+            text-align: left;
+            border-collapse: collapse;
+        }
+        .create-team tr {
+            padding: 20px;
+        }
+        .create-team th,td {
+            padding-right: 40px;
+            margin: 20px;
+            border-left: 1px gray solid;
+        }
+        .start-button {
+            display: flex;
+            justify-content: center; /* 수평 중앙 정렬 */
+            align-items: center; /* 수직 중앙 정렬 */
+            background-color: rgba(40, 86, 240, 0.89);
+            border-radius: 15px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            height: 50px;
+            margin: 50px 40px 10px;
+            cursor: pointer;
+            grid-column: 1 / span 2;;
+        }
+        .start-button:hover {
+            background-color: navy;
+        }
+    </style>
+</head>
+<body>
+    <div class="create-team">
+        <div>
+            <h2><span style="text-decoration: underline; color: skyblue;">삼성대웅 인슐린 신약 개발연구</span><br>팀이 생성되었습니다.</h2>
+            <div>
+                정밀의료빅데이터플랫폼에서 구성원들과 함께 스마트한 서비스들을 경험해보세요.
+            </div>
+            <table>
+                <tr>
+                    <th>이름</th>
+                    <th>가입플랜</th>
+                </tr>
+                <tr>
+                    <td>이호진</td>
+                    <td>팀Beta</td>
+                </tr>
+            </table>
+        </div>
+        <img src="프론트엔드 연습/social-proof-section-master/images/image-anne.jpg" alt="대체이미지">
+        <div class="start-button">
+            시작하기
+        </div>
+    </div>
+</body>
+</html>
